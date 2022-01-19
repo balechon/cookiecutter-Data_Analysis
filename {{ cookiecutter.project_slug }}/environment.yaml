@@ -1,0 +1,46 @@
+name: {{ cookiecutter.project_slug }}
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  {% if cookiecutter.project_packages == "All" -%}
+    - black
+    - invoke
+    - jupyter
+    - jupyterlab
+  {% endif -%}
+  {% if cookiecutter.project_packages == "All" -%}
+    - keras
+    - lightgbm
+  {% endif -%}
+    - matplotlib
+  {% if cookiecutter.project_packages == "All" -%}
+    - missingno
+  {% endif -%}
+    - nbdime
+    - numpy
+    - pandas
+  {% if cookiecutter.project_packages == "All" -%}
+    - pandas-flavor
+    - pandas-profiling
+  {% endif -%}
+    - pip
+    - plotly
+    - pyjanitor
+  {% if cookiecutter.project_packages == "All" -%}
+    - pylint
+  {% endif -%}
+    - pyprojroot
+    - python={{ cookiecutter.python_version }}
+  {% if cookiecutter.project_packages == "All" -%}
+    - python-dotenv
+    - scikit-learn
+  {% endif -%}
+    - seaborn
+
+  pip:
+  {% if cookiecutter.project_packages == "All" -%}
+    - pyhere
+  {% endif -%}
+

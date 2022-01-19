@@ -1,0 +1,30 @@
+black
+invoke
+jupyter
+jupyterlab
+{% if cookiecutter.project_packages == "All" -%}
+keras
+lightgbm
+{% endif -%}
+matplotlib
+{% if cookiecutter.project_packages == "All" -%}
+missingno
+{% endif -%}
+nbdime
+numpy
+pandas
+{% if cookiecutter.project_packages == "All" -%}
+pandas-flavor
+pandas-profiling
+{% endif -%}
+plotly
+pyjanitor
+{% if cookiecutter.project_packages == "All" -%}
+pylint
+{% endif -%}
+pyprojroot
+{% if cookiecutter.project_packages == "All" -%}
+python-dotenv
+scikit-learn
+{% endif -%}
+seaborn
