@@ -17,7 +17,8 @@ def make_item_list(*args):
         item(list): a list with all absolute file path in the specified folder
     """
     data_dir = make_path(*args)
-    items_list=[os.path.join(data_dir,item) for item in os.listdir(data_dir) if os.path.isfile(item)]
+    items = [os.path.join(data_dir, item) for item in os.listdir(data_dir)]
+    items_list = list(filter(lambda x: os.path.isfile(x), items))
     return items_list
 
 
@@ -28,6 +29,6 @@ def make_directories_list(*args):
         item(list): a list with all absolute directorie paths in the specified folder
     """
     data_dir = make_path(*args)
-    dir_list = [os.path.join(data_dir, item)
-                  for item in os.listdir(data_dir) if os.path.isdir(item)]
+    dir = [os.path.join(data_dir, item) for item in os.listdir(data_dir)]
+    dir_list = list(filter(lambda x: os.path.isdir(x), dir))
     return dir_list
