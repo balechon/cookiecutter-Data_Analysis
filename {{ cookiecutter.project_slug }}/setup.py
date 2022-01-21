@@ -18,7 +18,7 @@ def readme() -> str:
 
 setup(
     name='{{ cookiecutter.project_slug }}_packages',
-    version='{{ cookiecutter.project_version }}',
+    version='1.0',
     author='{{ cookiecutter.project_author_name.replace("\'", "\\\'") }}',
     author_email='{{ cookiecutter.project_author_email }}',
     description='{{ cookiecutter.project_description }}',
