@@ -4,6 +4,8 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - ipykernel
+  - ipython
   {% if cookiecutter.project_packages == "All" -%}
   - jupyter
   - jupyterlab
@@ -16,7 +18,7 @@ dependencies:
   - scipy
   - matplotlib
   - seaborn
-  -scikit-learn
+  - scikit-learn
   {% if cookiecutter.project_packages == "All" -%}
   - keras
   - pytorch
