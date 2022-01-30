@@ -20,7 +20,6 @@ This project has not a license file
 
 ## Directories Distribution
 ```
-{{ cookiecutter.project_slug }}
 ├── LICENCE
 ├── README.md
 ├── data
@@ -31,11 +30,20 @@ This project has not a license file
 ├── docs
 ├── environment.yaml
 ├── notebooks
-│   ├── 0.0-{{ cookiecutter.project_slug }}-introduction.ipynb
-│   └── functions
-│       └── get_path.py
+│   └── 0.0-{{ cookiecutter.project_slug }}-introduction.ipynb
 ├── reports
-└── requirements.txt
+├── requirements.txt
+├── scripts
+├── setup.py
+└── {{ cookiecutter.project_slug }}_packages
+    ├── __init__.py
+    ├── utils
+    │   ├── __init__.py
+    │   └── get_path.py
+    └── visualization
+        ├── __init__.py
+        └── visualization.py
+
 ```
 
 ## How to activate the enviroment

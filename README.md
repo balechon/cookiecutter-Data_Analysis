@@ -27,12 +27,12 @@ conda install -c conda-forge cookiecutter
 
 ## Directories Distribution
 ```
+
 ├── README.md
 ├── cookiecutter.json
 ├── environment.yaml
 ├── hooks
-│   └── post_gen_proyect.py
-├── tree.txt
+│   └── post_gen_project.py
 └── {{ cookiecutter.project_slug }}
     ├── LICENCE
     ├── README.md
@@ -44,13 +44,19 @@ conda install -c conda-forge cookiecutter
     ├── docs
     ├── environment.yaml
     ├── notebooks
-    │   ├── 0.0-{{ cookiecutter.project_slug }}-introduction.ipynb
-    │   └── functions
-    │       └── get_path.py
+    │   └── 0.0-{{ cookiecutter.project_slug }}-introduction.ipynb
     ├── reports
-    └── requirements.txt
-
-
+    ├── requirements.txt
+    ├── scripts
+    ├── setup.py
+    └── {{ cookiecutter.project_slug }}_packages
+        ├── __init__.py
+        ├── utils
+        │   ├── __init__.py
+        │   └── get_path.py
+        └── visualization
+            ├── __init__.py
+            └── visualization.py
 ```
 
 ## Usage
